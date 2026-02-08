@@ -5,108 +5,55 @@ SocialAgent AI
 
 Automated, Brand-Aware Social Media Content Creation for LinkedIn, Instagram, Twitter, and Facebook
 
-Project Overview
+# SocialAgent AI
 
-SocialAgent AI is an AI-powered assistant designed to automate the creation of realistic, human-like, and on-brand social media posts. It acts like a virtual junior social media manager and designer, helping marketing teams generate multiple post variations for campaigns, events, and announcements. The platform ensures brand consistency, optimizes posts for each platform, and allows iterative human-in-the-loop editing.
+**Automated, Brand-Aware Social Media Content Creation for LinkedIn, Instagram, Twitter, and Facebook**
+
+---
+
+## Project Overview
+
+**SocialAgent AI** is an AI-powered assistant designed to automate the creation of realistic, human-like, and on-brand social media posts. It acts like a virtual junior social media manager and designer, helping marketing teams generate multiple post variations for campaigns, events, and announcements. The platform ensures brand consistency, optimizes posts for each platform, and allows iterative human-in-the-loop editing.  
 
 This project is ideal for hackathons, startups, or small teams looking to save time while producing high-quality, visually appealing content across multiple social media platforms.
 
-Features
+---
 
-Brand Onboarding:
-Users provide website content, previous posts, brand guidelines, and logos. The AI infers tone, voice, visual identity, and color schemes.
+## Features
 
-Campaign Intent Capture:
-Users input campaign details such as platform, post type, key messages, tone, CTA, and theme colors.
+- **Brand Onboarding:**  
+  Users provide website content, previous posts, brand guidelines, and logos. The AI infers tone, voice, visual identity, and color schemes.
 
-Automated Post Generation:
-Generates multiple post variations with realistic captions, background images, logos/icons, and text overlays. Optimized for platform norms:
+- **Campaign Intent Capture:**  
+  Users input campaign details such as platform, post type, key messages, tone, CTA, and theme colors.
 
-Instagram: Visual-first, mobile-friendly, emoji-rich captions.
+- **Automated Post Generation:**  
+  Generates multiple post variations with realistic captions, background images, logos/icons, and text overlays. Optimized for platform norms:  
+  - **Instagram:** Visual-first, mobile-friendly, emoji-rich captions.  
+  - **LinkedIn:** Professional, human-like, informative tone.  
+  - **Twitter/X:** Short, concise, impactful messages.  
+  - **Facebook:** Engaging, community-oriented posts.
 
-LinkedIn: Professional, human-like, informative tone.
+- **Agentic Self-Feedback Loop:**  
+  AI reviews and improves posts internally before presenting them to users.
 
-Twitter/X: Short, concise, impactful messages.
+- **Human-in-the-Loop Editing:**  
+  Users can modify captions, request alternative images, adjust design elements, or generate 4–5 new variations.
 
-Facebook: Engaging, community-oriented posts.
+- **Optional Advanced Features:**  
+  - Short-form video creation for posts.  
+  - Proactive content suggestions based on inferred content strategy.  
+  - Multi-platform adaptation with optimized layouts and captions.
 
-Agentic Self-Feedback Loop:
-AI reviews and improves posts internally before presenting them to users.
+---
 
-Human-in-the-Loop Editing:
-Users can modify captions, request alternative images, adjust design elements, or generate 4–5 new variations.
+## Installation & Deployment
 
-Optional Advanced Features:
+1. Clone this repository:  
+   ```bash
+   git clone https://github.com/yourusername/socialagent-ai.git
+   cd socialagent-ai
 
-Short-form video creation for posts.
-
-Proactive content suggestions based on inferred content strategy.
-
-Multi-platform adaptation with optimized layouts and captions.
-
-Installation & Deployment
-
-Clone this repository:
-
-git clone https://github.com/yourusername/socialagent-ai.git
-cd socialagent-ai
-
-
-Install dependencies:
-
-npm install
-
-
-Set up environment variables:
-Create a .env file with your API keys:
-
-REACT_APP_API_KEY=your_gemini_or_huggingface_key
-
-
-Run locally:
-
-npm run dev
-
-
-Deploy to Netlify or Vercel:
-
-Push repository to GitHub.
-
-Connect the repo to your deployment platform.
-
-Add API keys as environment variables in deployment settings.
-
-Build & deploy.
-
-Technologies Used
-
-Frontend: React, TypeScript, Vite
-
-AI Services: Google Gemini 3, Hugging Face (image generation), optional video APIs
-
-Deployment: Netlify / Vercel
-
-Others: CSS Modules / Tailwind CSS for styling
-
-Usage
-
-Onboarding: Paste website content, previous posts, or upload logos/images.
-
-Input campaign intent (post type, platform, message, CTA).
-
-Generate post variations.
-
-Fine-tune captions, images, or layout using AI suggestions.
-
-Export or schedule posts across platforms.
-
-Project Goal
-
-To provide a scalable, reliable, and realistic social media content creation platform that reduces manual effort, ensures brand consistency, and helps teams maintain engagement across multiple social media channels.
-
-License
-
-MIT License – feel free to adapt for hackathon or personal use.
 
 # Run and deploy your AI Studio app
 
