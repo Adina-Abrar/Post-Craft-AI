@@ -75,8 +75,10 @@ This project is ideal for hackathons, startups, or small teams looking to save t
 Check out the full working demo of PostCraft AI below. It shows the platform generating AI-powered social media content and visuals in real time.
 
 [![PostCraft AI Demo](https://img.youtube.com/vi/i6X-ny8zEO8/0.jpg)](https://youtu.be/i6X-ny8zEO8)
-
-
+---
+## Project Presentation 📊
+[Download PostCraft AI Presentation (PPT)](https://docs.google.com/presentation/d/1H9lZLG_hqzIIQhO_-JmYwcXNnze6-TAf/edit?usp=sharing&ouid=113543317474438166370&rtpof=true&sd=true)
+---
 ## Installation & Deployment
 
 ### Clone the Repository
@@ -87,7 +89,6 @@ cd PostCraft-AI
 ### View the Live App 🌐
 The project is already deployed and accessible online:  
 [PostCraft AI on Vercel](https://post-craft-ai-sooty.vercel.app/)
->>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
 ## Run Locally
 
 **Prerequisites:**  Node.js
