@@ -1,6 +1,10 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
+<<<<<<< HEAD
 import { BrandIdentity, CampaignIntent, SocialPost } from "../types.ts";
+=======
+import { BrandIdentity, CampaignIntent, SocialPost } from "../types";
+>>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
 
 /**
  * Robustly extracts and parses JSON from a string, handling Markdown blocks or extra text.
@@ -20,14 +24,20 @@ const parseGeminiJson = (text: string | undefined) => {
 /**
  * Creates a fresh instance of the AI client using the current environment variable.
  */
+<<<<<<< HEAD
 const getAI = () => {
   if (!process.env.API_KEY) {
     throw new Error("API Key is missing. Please select your API key using the activation screen.");
   }
+=======
+const createAIClient = () => {
+  // Always use process.env.API_KEY as the source for the API key.
+>>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
   return new GoogleGenAI({ apiKey: process.env.API_KEY });
 };
 
 export const chatWithAgent = async (message: string, history: any[] = []) => {
+<<<<<<< HEAD
   const ai = getAI();
   try {
     const response = await ai.models.generateContent({
@@ -54,6 +64,19 @@ export const chatWithAgent = async (message: string, history: any[] = []) => {
       text: response.text,
       sources
     };
+=======
+  const ai = createAIClient();
+  try {
+    const chat = ai.chats.create({
+      model: 'gemini-3-flash-preview',
+      config: {
+        systemInstruction: "You are a senior Social Media Strategist. Provide concise, expert advice on branding and campaigns.",
+      },
+      history: history.length > 0 ? history : undefined,
+    });
+    const response = await chat.sendMessage({ message });
+    return response.text;
+>>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
   } catch (error) {
     console.error("Chat Error:", error);
     throw error;
@@ -61,8 +84,13 @@ export const chatWithAgent = async (message: string, history: any[] = []) => {
 };
 
 export const inferBrandIdentity = async (rawInput: string, assetBase64?: string): Promise<BrandIdentity> => {
+<<<<<<< HEAD
   const ai = getAI();
   const prompt = `Analyze this brand context using Gemini 3 Flash. Extract a high-fidelity brand DNA. 
+=======
+  const ai = createAIClient();
+  const prompt = `Act as a senior brand strategist. Analyze the following context and extract a brand identity. 
+>>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
     Return ONLY a JSON object with: name, voice, colors (array of hex codes), tone, style.
     Context: ${rawInput}`;
 
@@ -99,11 +127,19 @@ export const inferBrandIdentity = async (rawInput: string, assetBase64?: string)
 };
 
 export const generateCampaignStructure = async (intentPrompt: string, brand: BrandIdentity, platforms: string[]): Promise<CampaignIntent> => {
+<<<<<<< HEAD
   const ai = getAI();
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: `Plan a campaign for brand: ${brand.name}. Goal: ${intentPrompt}. Platforms: ${platforms.join(', ')}`,
+=======
+  const ai = createAIClient();
+  try {
+    const response = await ai.models.generateContent({
+      model: 'gemini-3-flash-preview',
+      contents: `Plan a social media campaign for brand: ${brand.name}. Goal: ${intentPrompt}. Platforms: ${platforms.join(', ')}`,
+>>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
       config: {
         responseMimeType: "application/json",
         responseSchema: {
@@ -137,11 +173,19 @@ export const generateCampaignStructure = async (intentPrompt: string, brand: Bra
 };
 
 export const generatePostVariations = async (brand: BrandIdentity, intent: CampaignIntent): Promise<SocialPost[]> => {
+<<<<<<< HEAD
   const ai = getAI();
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: `Generate high-engagement posts for: ${JSON.stringify(intent)}. Identity: ${JSON.stringify(brand)}.`,
+=======
+  const ai = createAIClient();
+  try {
+    const response = await ai.models.generateContent({
+      model: 'gemini-3-flash-preview',
+      contents: `Generate human-like social media posts for: ${JSON.stringify(intent)}. Brand Identity: ${JSON.stringify(brand)}. Ensure captions are engaging and tailored to each platform.`,
+>>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
       config: {
         responseMimeType: "application/json",
         responseSchema: {
@@ -180,8 +224,18 @@ export const generatePostVariations = async (brand: BrandIdentity, intent: Campa
 };
 
 export const refinePostContent = async (currentPost: SocialPost, instruction: string, brand: BrandIdentity): Promise<{ caption: string, imagePrompt: string, reasoning: string }> => {
+<<<<<<< HEAD
   const ai = getAI();
   const prompt = `Refine this post. Feedback: ${instruction}. Context: ${JSON.stringify(brand)}. Current Caption: ${currentPost.caption}`;
+=======
+  const ai = createAIClient();
+  const prompt = `Refine this social media post based on user feedback.
+    Current Caption: ${currentPost.caption}
+    Current Image Prompt: ${currentPost.imagePrompt}
+    User Instruction: ${instruction}
+    Brand Context: ${JSON.stringify(brand)}
+    Return ONLY a JSON object with: caption, imagePrompt, reasoning.`;
+>>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
 
   try {
     const response = await ai.models.generateContent({
@@ -208,8 +262,13 @@ export const refinePostContent = async (currentPost: SocialPost, instruction: st
 };
 
 export const generateImageForPost = async (imagePrompt: string, brand: BrandIdentity): Promise<string> => {
+<<<<<<< HEAD
   const ai = getAI();
   const parts: any[] = [{ text: `Social Media Visual: ${imagePrompt}. Style: ${brand.style}. Colors: ${brand.colors.join(', ')}.` }];
+=======
+  const ai = createAIClient();
+  const parts: any[] = [{ text: `A professional social media visual. Prompt: ${imagePrompt}. Artistic Vibe: ${brand.style}. Colors: ${brand.colors.join(', ')}.` }];
+>>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
   
   if (brand.assetData) {
     const data = brand.assetData.replace(/^data:image\/[a-z]+;base64,/, "");
@@ -218,16 +277,28 @@ export const generateImageForPost = async (imagePrompt: string, brand: BrandIden
   
   try {
     const response = await ai.models.generateContent({
+<<<<<<< HEAD
       model: 'gemini-3-pro-image-preview',
       contents: { parts },
       config: { 
         imageConfig: { 
           aspectRatio: "1:1",
           imageSize: "1K"
+=======
+      model: 'gemini-2.5-flash-image',
+      contents: { parts },
+      config: { 
+        imageConfig: { 
+          aspectRatio: "1:1"
+>>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
         } 
       }
     });
     
+<<<<<<< HEAD
+=======
+    // Iterate through parts to find the image part as recommended by the guidelines.
+>>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
     const part = response.candidates?.[0]?.content?.parts.find(p => p.inlineData);
     if (part?.inlineData) return `data:image/png;base64,${part.inlineData.data}`;
     throw new Error("Visual synthesis failed.");
@@ -236,6 +307,7 @@ export const generateImageForPost = async (imagePrompt: string, brand: BrandIden
     throw error;
   }
 };
+<<<<<<< HEAD
 
 export const generateVideoForPost = async (prompt: string): Promise<string> => {
   const ai = getAI();
@@ -266,3 +338,5 @@ export const generateVideoForPost = async (prompt: string): Promise<string> => {
     throw error;
   }
 };
+=======
+>>>>>>> a2db434f7e51519375edf393369d7319a46cecd1
