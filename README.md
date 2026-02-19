@@ -1,19 +1,34 @@
+# **PostCraft AI**
+
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <img width="1200" height="475" alt="GHBanner" src="https://drive.google.com/uc?export=view&id=1-EyuOkT5hZwnIqsomrJFp8Z-fR6ZGV_T" />
 </div>
-SocialAgent AI
 
 Automated, Brand-Aware Social Media Content Creation for LinkedIn, Instagram, Twitter, and Facebook
 
-# SocialAgent AI
+# PostCraft AI
 
 **Automated, Brand-Aware Social Media Content Creation for LinkedIn, Instagram, Twitter, and Facebook**
+<p align="center">
+  <a href="https://www.linkedin.com/in/adina-abrar" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="45" style="margin: 0 10px;"/>
+  </a>
+  <a href="https://www.kaggle.com/adinaabrar" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" width="45" style="margin: 0 10px;"/>
+  </a>
+  <a href="https://github.com/Adina-Abrar" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="45" style="margin: 0 10px;"/>
+  </a>
+  <a href="mailto:adinaabrar1111@gmail.com">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" width="45" style="margin: 0 10px;"/>
+  </a>
+</p>
 
 ---
 
 ## Project Overview
 
-**SocialAgent AI** is an AI-powered assistant designed to automate the creation of realistic, human-like, and on-brand social media posts. It acts like a virtual junior social media manager and designer, helping marketing teams generate multiple post variations for campaigns, events, and announcements. The platform ensures brand consistency, optimizes posts for each platform, and allows iterative human-in-the-loop editing.  
+**PostCraft** is an AI-powered assistant designed to automate the creation of realistic, human-like, and on-brand social media posts. It acts like a virtual junior social media manager and designer, helping marketing teams generate multiple post variations for campaigns, events, and announcements. The platform ensures brand consistency, optimizes posts for each platform, and allows iterative human-in-the-loop editing.  
 
 This project is ideal for hackathons, startups, or small teams looking to save time while producing high-quality, visually appealing content across multiple social media platforms.
 
@@ -46,21 +61,31 @@ This project is ideal for hackathons, startups, or small teams looking to save t
   - Multi-platform adaptation with optimized layouts and captions.
 
 ---
+## Technologies Used 
+
+- **Frontend:** React, TypeScript, Tailwind CSS  
+- **AI Integration:** Gemini API / other AI models  
+- **Deployment:** Vercel  
+- **IDE / Tools:** Visual Studio Code, Node.js  
+
+---
+## Project Demo 
+
+Check out the full working demo of PostCraft AI below. It shows the platform generating AI-powered social media content and visuals in real time.
+
+[![PostCraft AI Demo](https://img.youtube.com/vi/i6X-ny8zEO8/0.jpg)](https://youtu.be/i6X-ny8zEO8)
+
 
 ## Installation & Deployment
 
-1. Clone this repository:  
-   ```bash
-   git clone https://github.com/yourusername/socialagent-ai.git
-   cd socialagent-ai
+### Clone the Repository
 
+git clone https://github.com/Adina-Abrar/PostCraft-AI.git
+cd PostCraft-AI
 
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1_1AxglllR5xNUKYgppvMGPgDNC7HI-SC
-
+### View the Live App 🌐
+The project is already deployed and accessible online:  
+[PostCraft AI on Vercel](https://post-craft-ai-sooty.vercel.app/)
 ## Run Locally
 
 **Prerequisites:**  Node.js
